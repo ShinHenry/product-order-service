@@ -22,7 +22,7 @@ class ProductApiTest extends ApiTest {
         assertThat(response.statusCode()).isEqualTo(HttpStatus.CREATED.value());
     }
 
-    private ExtractableResponse<Response> 상품등록요청(AddProductRequest request) {
+    private ExtractableResponse<Response> 상품등록요청(final AddProductRequest request) {
         return RestAssured.given().log().all()
                 .contentType(MediaType.APPLICATION_JSON_VALUE)
                 .body(request)
